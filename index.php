@@ -58,7 +58,7 @@ if (isset($json) && strtolower($json) == 'json') {
                 $startScript = "php";
                 break;
         }
-       if ($startScript == "java"{
+       if ($startScript == "java" ) {
        $f = @exec("java" . " scripts/" . $extension[0] . "class");
        } else { 
              $f = @exec($startScript . " scripts/" . $file);
