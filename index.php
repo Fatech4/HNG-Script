@@ -58,9 +58,11 @@ if (isset($json) && strtolower($json) == 'json') {
                 $startScript = "php";
                 break;
         }
-
-        $f = @exec($startScript . " scripts/" . $file);
-
+       if ($startScript == "java"{
+       $f = @exec("java" . " scripts/" . $extension[0] . "class");
+       } else { 
+             $f = @exec($startScript . " scripts/" . $file);
+       }
 
         $newString = str_ireplace(getEmailFromFileContent($f),' ', str_ireplace(' and email','', $f));
 
